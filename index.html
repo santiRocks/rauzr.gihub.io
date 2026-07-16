@@ -3,41 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rauzr | Sovereign Enterprise AI</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-white text-slate-900 font-sans antialiased">
+    <title>Rauzr | Sovereign AI Infrastructure & Enterprise Technology Advisory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --card-border: #e2e8f0;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --accent-blue: #2563eb;
+            --accent-blue-hover: #1d4ed8;
+            --card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
+        
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; border-bottom: 1px solid var(--card-border); background: rgba(248, 250, 252, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--text-main); text-decoration: none; }
+        .logo span { color: var(--accent-blue); }
+        nav a { color: var(--text-muted); text-decoration: none; margin-left: 30px; font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
+        nav a:hover, nav a.active { color: var(--accent-blue); }
+        .btn-nav { border: 1px solid var(--accent-blue); color: var(--accent-blue); padding: 8px 20px; border-radius: 6px; }
+        .btn-nav:hover { background: var(--accent-blue); color: #ffffff; }
 
-    <header class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center border-b border-slate-100">
-        <div class="text-2xl font-bold tracking-wider text-teal-600">RAUZR</div>
-        <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-            <a href="/" class="text-teal-600">Home</a>
-            <a href="/why-sovereign-ai/" class="hover:text-teal-600 transition">Why Sovereign AI?</a>
-            <a href="/secure-architecture/" class="hover:text-teal-600 transition">Architecture</a>
+        .hero { padding: 100px 8% 80px; text-align: center; max-width: 1000px; margin: 0 auto; }
+        .badge { display: inline-block; padding: 6px 16px; background: #eff6ff; border: 1px solid #bfdbfe; color: var(--accent-blue); border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
+        h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px; color: var(--text-main); }
+        .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 40px; font-weight: 400; }
+        .cta-group { display: flex; justify-content: center; gap: 20px; }
+        .btn-primary { background: var(--accent-blue); color: #ffffff; padding: 16px 36px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25); }
+        .btn-primary:hover { background: var(--accent-blue-hover); transform: translateY(-2px); }
+        .btn-secondary { border: 1px solid var(--card-border); background: #ffffff; color: var(--text-main); padding: 16px 36px; border-radius: 8px; font-weight: 600; text-decoration: none; }
+
+        .grid-section { padding: 80px 8%; background: #ffffff; border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--bg-color); border: 1px solid var(--card-border); padding: 40px; border-radius: 12px; transition: 0.3s; box-shadow: var(--card-shadow); }
+        .card:hover { border-color: var(--accent-blue); transform: translateY(-5px); background: #ffffff; }
+        .card h3 { font-size: 1.3rem; margin-bottom: 15px; color: var(--text-main); font-weight: 700; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
+        .card-link { color: var(--accent-blue); font-weight: 700; text-decoration: none; }
+
+        footer { padding: 40px 8%; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">RAUZR<span>.AI</span></a>
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/why-sovereign-ai/">Why Sovereign AI</a>
+            <a href="/secure-architecure/">Secure Architecture</a>
+            <a href="/pharma.html">Pharma Practice</a>
+            <a href="/contact.html" class="btn-nav">Request Audit</a>
         </nav>
-        <div>
-            <a href="mailto:contact@rauzr.ai" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded font-semibold text-sm transition">Request Briefing</a>
-        </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 py-24 text-center">
-        <span class="text-xs font-semibold tracking-widest text-teal-700 uppercase bg-teal-50 px-3 py-1 rounded-full border border-teal-100">Air-Gapped Node Infrastructure</span>
-        <h1 class="text-4xl md:text-5xl font-extrabold mt-6 tracking-tight leading-tight text-slate-900">
-            Your Data. Your Servers.<br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-600">Your Own Local LLM.</span>
-        </h1>
-        <p class="mt-6 text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Rauzr deploys secure, completely isolated Large Language Models entirely within your private infrastructure. Accelerate SOP discovery and audit preparation with zero risk of data leakage.
-        </p>
-
-        <div class="mt-10 flex justify-center space-x-4">
-            <a href="/why-sovereign-ai/" class="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-medium transition text-sm">
-                Explore The Pharma Paradigm &rarr;
-            </a>
+    <section class="hero">
+        <span class="badge">Sovereign AI & Private Cloud Infrastructure</span>
+        <h1>Air-Gapped AI Architecture for Regulated Enterprise.</h1>
+        <p>We help CDOs, CIOs, and Quality Leaders in Pharma and Healthcare architect, audit, and deploy deterministic, zero-leakage LLM systems—100% inside their private perimeter.</p>
+        <div class="cta-group">
+            <a href="/contact.html" class="btn-primary">Schedule an AI Audit</a>
+            <a href="/secure-architecure/" class="btn-secondary">Explore Architecture</a>
         </div>
-    </main>
+    </section>
 
-    <footer class="max-w-6xl mx-auto px-6 py-12 border-t border-slate-100 text-center text-xs text-slate-400">
-        &copy; 2026 Rauzr Technologies. Private Virtual Enclave Deployments.
+    <section class="grid-section">
+        <div class="section-title">
+            <h2>Core Infrastructure & Practice Areas</h2>
+            <p>Moving from public API liability to localized competitive advantage.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>Why Sovereign AI</h3>
+                <p>Learn why public cloud APIs are legal liabilities for pharmaceutical IP and why isolated on-premise models are mandatory.</p>
+                <a href="/why-sovereign-ai/" class="card-link">Read Executive Briefing &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>Secure Architecture</h3>
+                <p>Technical deep dive into our air-gapped VPC containers, local vector storage, and 21 CFR Part 11 cryptographic logging.</p>
+                <a href="/secure-architecure/" class="card-link">View Technical Blueprint &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>Life Sciences Practice</h3>
+                <p>Specific automation engines for QA Batch Record review, Deviation drafting, and FDA audit gap analysis.</p>
+                <a href="/pharma.html" class="card-link">Explore Use Cases &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 RAUZR TECHNOLOGIES PRIVATE LIMITED. All rights reserved. | Air-Gapped Enterprise Architecture</p>
     </footer>
 </body>
 </html>
